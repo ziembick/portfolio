@@ -5,11 +5,9 @@ import { WorkExperience } from "./components/pages/home/work-experience";
 import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
 import { HomePageData } from "./types/page-info";
 
-
 export const metadata = {
-  title: 'Home',
-}
-
+  title: "Home",
+};
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
@@ -64,7 +62,7 @@ const getPageData = async (): Promise<HomePageData> => {
     }
   `;
 
-  return fetchHygraphQuery(query, 60 * 60 * 24);
+  return fetchHygraphQuery(query, 1000 * 60 * 60 * 24);
 };
 
 export default async function Home() {

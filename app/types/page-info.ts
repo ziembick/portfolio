@@ -37,5 +37,5 @@ export type ProjectPageStaticData = {
 
 export type HomePageData = {
     page: HomePageInfo
-    workExperiences: WorkExperience
+    workExperiences: WorkExperience[]
 }
