@@ -1,49 +1,90 @@
+"use client";
+
 import { TechBadge } from "@/app/components/tech-badge";
+import { Project } from "@/app/types/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { techBadgeAnimation } from "@/app/lib/animations";
 
-export const ProjectCard = () => {
+type ProjectCardProps = {
+  project: Project;
+};
+
+export const ProjectCard = ({ project }: ProjectCardProps) => {
+  const animProps = {
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 50 },
+  };
+
   return (
-    <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
-      <div className="w-full h-full">
+    <motion.div
+      className="flex gap-6 lg:gap-12 flex-col lg:flex-row"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 100 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="w-full h-[200px] sm:h-[300px] lg:w-[450px] lg:min-h-full"
+        initial={{ opacity: 0, y: 100, scale: 0.5 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 100, scale: 0.5 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
+      >
         <Image
           width={420}
           height={304}
-          src="https://portfolio-tutorial-2023.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FqSXcz2JdTMOPKlteRZKY&w=640&q=75"
-          alt="Thumbnail do Projeto Bookwise"
-          className="lg:min-h-full object-cover rounded-lg"
+          src={project.thumbnail.url}
+          alt={`Thumbnail do projeto ${project.title}`}
+          className="w-full h-full object-cover rounded-lg"
           // w-full h-[200px] sm:h-[300px] lg:w-[450px] add to classname if needed
         />
-      </div>
+      </motion.div>
 
-      <div>
-        <h3 className="flex items-center gap-3 font-medium text-lg text-gray-50">
-          <Image 
-          width={20}
-          height={20}
-          alt=""
-          src="/images/icons/project-title-icon.svg"
+      <div className="flex-1 lg:py-[18px]">
+        <motion.h3
+          className="flex items-center gap-3 font-medium text-lg text-gray-50"
+          {...animProps}
+          transition={{ duration: 0.7 }}
+        >
+          <Image
+            width={20}
+            height={20}
+            alt=""
+            src="/images/icons/project-title-icon.svg"
           />
-          Bookwise
-        </h3>
-        <p className="text-gray-400 my-6">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum expedita recusandae aperiam sed illum repellat ducimus modi excepturi fugiat? Reprehenderit inventore perferendis, hic in consequuntur impedit molestiae aperiam sequi soluta.
-        </p>
+          {project.title}
+        </motion.h3>
+        <motion.p
+          className="text-gray-400 my-6"
+          {...animProps}
+          transition={{ duration: 0.2, delay: 0.3 }}
+        >
+          {project.shortDescription}
+        </motion.p>
         <div className="flex gap-x-2 gap-y-3 flex-wrap mb-8 lg:max-w-[350px]">
-          <TechBadge name="Next.js"/>
-          <TechBadge name="Next.js"/>
-          <TechBadge name="Next.js"/>
-          <TechBadge name="Next.js"/>
-          <TechBadge name="Next.js"/>
-          <TechBadge name="Next.js"/>
+          {project.technologies.map((tech, i) => (
+            <TechBadge
+              key={`${project.title}-tech-${tech.name}`}
+              name={tech.name}
+              {...techBadgeAnimation}
+              transition={{ duration: 0.2, delay: 0.5 + i * 0.1}}
+
+            />
+          ))}
         </div>
 
-        <Link href="/projects/book-wise" className="flex items-center gap-2 text-sm">
+        <Link
+          href={`/projects/${project.slug}`}
+          className="flex items-center gap-2 text-sm"
+        >
           Ver projeto
-          <HiArrowNarrowRight size={18}/>
+          <HiArrowNarrowRight size={18} />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
