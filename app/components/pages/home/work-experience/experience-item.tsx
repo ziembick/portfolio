@@ -70,7 +70,6 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         <div className="flex flex-col gap-2 text-sm sm:text-base">
           <a
             href={companyUrl}
-            target="_blank"
             className="text-gray-500 hover:text-emerald-500 transition-colors"
           >
             @ {companyName}
