@@ -62,12 +62,3 @@ export default async function Projects() {
     </>
   );
 }
-
-export async function getStaticPaths() {
-  const paths = await generateStaticParams();
-
-  return {
-    paths,
-    fallback: false
-  };
-}
