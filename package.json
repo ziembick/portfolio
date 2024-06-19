@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prettier-ignore": "echo 'Skipping Prettier checks'",
     "start": "next start",
     "lint": "next lint"
   },
