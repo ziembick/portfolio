@@ -3,11 +3,17 @@ import { ProjectsList } from "../components/pages/projects/projects-list";
 import { ProjectsPageData } from "../types/page-info";
 import { fetchHygraphQuery } from "../utils/fetch-hygraph-query";
 
-
 export const metadata = {
   title: 'Projetos'
 }
 
+const PROJECT_SLUGS_QUERY = `
+  query {
+    projects {
+      slug
+    }
+  }
+`;
 
 const getPageData = async (): Promise<ProjectsPageData> => {
   const query = `
@@ -24,16 +30,30 @@ const getPageData = async (): Promise<ProjectsPageData> => {
         }
       }
     }
-    `
+  `;
 
-  return fetchHygraphQuery (
-    query,
-    60 * 60 * 24
-  )
-
+  return fetchHygraphQuery(query, 60 * 60 * 24);
 }
+
+export async function generateStaticParams() {
+  try {
+    const data = await fetchHygraphQuery<{ projects: { slug: string }[] }>(PROJECT_SLUGS_QUERY);
+
+    if (!data || !data.projects) {
+      throw new Error('Invalid data structure received from Hygraph');
+    }
+
+    return data.projects.map(project => ({
+      slug: project.slug
+    }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    throw error; // Re-throw the error to fail the build if necessary
+  }
+}
+
 export default async function Projects() {
-  const { projects } = await getPageData()
+  const { projects } = await getPageData();
 
   return (
     <>
@@ -41,4 +61,13 @@ export default async function Projects() {
       <ProjectsList projects={projects}/>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = await generateStaticParams();
+
+  return {
+    paths,
+    fallback: false
+  };
 }
