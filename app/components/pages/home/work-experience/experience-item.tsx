@@ -64,7 +64,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
             alt={`Logo da empresa ${companyName}`}
           />
         </div>
-        <div className="h-full w-[1px] bg-gray-800"></div>
+        <div className="h-full w-[1px] bg-gray-80"></div>
       </div>
       <div>
         <div className="flex flex-col gap-2 text-sm sm:text-base">
