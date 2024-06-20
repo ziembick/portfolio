@@ -44,7 +44,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
 
   return (
     <section
-      className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110
+      className="w-full lg:h-[755px] bg-gray-950 flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110
     px]"
     >
       <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
