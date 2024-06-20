@@ -66,7 +66,8 @@ export async function generateStaticParams() {
 
   const { projects } = await fetchHygraphQuery<ProjectPageStaticData>(query);
 
-  return projects;
+  // return projects;
+  return projects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({
