@@ -41,7 +41,8 @@ const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   }
   `;
 
-  return fetchHygraphQuery(query, 60 * 60 * 24);
+  return fetchHygraphQuery(query);
+  // return fetchHygraphQuery(query, 60 * 60 * 24);
 };
 
 export default async function Project({ params: { slug } }: ProjectProps) {
