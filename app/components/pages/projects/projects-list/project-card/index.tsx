@@ -23,13 +23,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       <div className="flex-1 flex flex-col p-8">
-        <strong className="font-medium text-gray-50/90 group-hover:text-customPurple transition-all">
+        <strong className="font-mono text-gray-50/90 group-hover:text-customPurple transition-all">
           Bookwise
         </strong>
-        <p className="mt-2 text-gray-400 line-clamp-4">
+        <p className="mt-2 text-gray-400 line-clamp-4 font-mono">
          {project.shortDescription}
         </p>
-        <span className="text-gray-300 text-sm font-medium block mt-auto truncate">
+        <span className="text-gray-300 text-lg font-mono block mt-auto truncate group-hover:text-customPurple">
           {technologies}
         </span>
       </div>

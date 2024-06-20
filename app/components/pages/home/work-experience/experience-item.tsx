@@ -67,14 +67,14 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         <div className="h-full w-[1px] bg-gray-800"></div>
       </div>
       <div>
-        <div className="flex flex-col gap-2 text-sm sm:text-base">
+        <div className="flex flex-col gap-2 text-sm sm:text-base font-mono">
           <a
             href={companyUrl}
-            className="text-gray-500 hover:text-emerald-500 transition-colors"
+            className="text-gray-500 hover:text-customPurple transition-colors font-mono"
           >
             @ {companyName}
           </a>
-          <h4 className="text-gray-400">{role}</h4>
+          <h4 className="text-gray-400 font-mono">{role}</h4>
           <span className="text-gray-500">
             {formattedStartDate} até {formattedEndDate} ({formattedDurations})
           </span>
@@ -85,7 +85,7 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
         <p className="text-gray-400 text-sm mb-3 mt-6 font-semibold">
           Competências
         </p>
-        <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8">
+        <div className="flex gap-x-2 gap-y-3 flex-wrap lg:max-w-[350px] mb-8 font-mono">
           {technologies.map((tech,i) => (
             <TechBadge
               key={`experience-${companyName}-tech-${tech.name}`}

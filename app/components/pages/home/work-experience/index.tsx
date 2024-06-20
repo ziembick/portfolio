@@ -8,13 +8,13 @@ type WorkExperienceProps = {
 
 export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
   return (
-    <section className="container py-16 flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row">
+    <section className="container py-16 flex gap-10 md:gap-4 lg:gap-16 flex-col md:flex-row font-mono">
       <div className="max-w-[420px]">
         <SectionTitle
           subtitle="experiências"
           title="Experiência Profissional"
         />
-        <p>
+        <p className="font-mono py-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit
           quam aperiam error animi. Aut mollitia voluptatum non, sunt animi rem
           nesciunt repellat corporis aperiam repellendus reiciendis optio ab?

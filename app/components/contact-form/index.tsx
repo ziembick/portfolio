@@ -42,13 +42,13 @@ export const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950"
+      className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950 font-mono"
     >
       <div className="w-full max-w-[420px] mx-auto">
         <SectionTitle
           subtitle="contato"
           title="Vamos trabalhar juntos? Entre em contato!"
-          className="items-center text-center"
+          className="items-center text-center font-mono"
         />
         <motion.form
           className="mt-12 w-full flex flex-col gap-4"
@@ -76,7 +76,7 @@ export const ContactForm = () => {
           />
 
           <Button
-            className="w-max mx-auto mt-6 shadow-button"
+            className="w-max mx-auto mt-6 shadow-button font-mono"
             disabled={isSubmitting}
           >
             Enviar Mensagem

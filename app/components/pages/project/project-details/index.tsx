@@ -18,7 +18,7 @@ type ProjectDetailsProps = {
 
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   return (
-    <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-center relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden">
+    <section className="w-full sm:min-h-[750px] flex flex-col items-center justify-center relative pb-10 sm:pb-24 py-24 px-6 overflow-hidden font-mono">
       <motion.div
         className="absolute inset-0 z-[-1]"
         style={{
@@ -31,7 +31,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       <SectionTitle
         subtitle="projetos"
         title={project.title}
-        className="text-center items-center sm:[&>h3]:text-4xl"
+        className="text-center items-center sm:[&>h3]:text-4xl font-mono"
       />
       <motion.div 
       className="text-gray-400 text-center max-w-[640px] my-4 sm:my-6 text-sm sm:text-base"
@@ -71,7 +71,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         )}
       </motion.div>
       <Link href="/projects">
-        <HiArrowNarrowLeft />
+        <HiArrowNarrowLeft className="text-customPurple"/>
         Voltar para os projetos
       </Link>
     </section>

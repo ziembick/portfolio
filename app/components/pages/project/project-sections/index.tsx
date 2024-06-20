@@ -15,11 +15,11 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
       {sections.map((section, i) => (
         <motion.div
           key={section.title}
-          className="flex flex-col items-center gap-6 md:gap-12"
+          className="flex flex-col items-center gap-6 md:gap-12 font-mono"
           {...fadeUpAnimation}
           transition={{ duration: 0.5, delay: i * 0.1}}
         >
-          <h2 className="text-2xl md:text-3xl font-medium text-gray-300">
+          <h2 className="text-2xl md:text-3xl font-mono text-gray-300">
             {section.title}
           </h2>
           <Image

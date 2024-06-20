@@ -14,7 +14,7 @@ module.exports = {
         'hero-image': "url('/images/hero-bg.png')",
       },
       fontFamily: {
-        mono: ['var(--font-plex-mono)', 'monospace'],
+        mono: ['var(--font-space-grotesk)', 'monospace'],
       },
       boxShadow: {
         button: '0px 0px 68px 7px rgba(128, 50, 200, 0.4)',
@@ -24,6 +24,7 @@ module.exports = {
         customPurpleEscuro: '#7900DA',
         customPurpleEscuroMais: '#5A04AD',
         pretoLavado: '#191919',
+        customPurpleOpacity: 'rgba(25, 25, 25, 0.8)',
       },
     },
   },

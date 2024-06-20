@@ -56,11 +56,11 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           transition={{ duration: 0.5 }}
         >
           <p className="font-mono text-customPurple">Olá, meu nome é</p>
-          <h2 className="text-4xl font-medium mt-2">Paulo Ziembick</h2>
-          <div className="text-gray-400 my-6 text-sm sm:text-base">
+          <h2 className="text-4xl font-mono mt-2">Paulo Ziembick</h2>
+          <div className="text-gray-400 font-mono my-6 text-sm sm:text-base">
             <RichText content={homeInfo.introduction.raw} />
           </div>
-          <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
+          <div className="flex font-mono flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
             {homeInfo.technologies.map((tech, i) => (
               <TechBadge
                 name={tech.name}
@@ -70,17 +70,17 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
               />
             ))}
           </div>
-          <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="w-max shadow-button" onClick={handleContact}>
+          <div className="mt-6 lg:mt-10 flex sm:items-center font-mono sm:gap-5 flex-col sm:flex-row">
+            <Button className="w-max shadow-button font-mono" onClick={handleContact}>
               Entre em contato
               <HiArrowNarrowRight size={18} />
             </Button>
-            <div className=" text-2xl text-gray-600 flex items-center h-20 gap-3">
+            <div className=" text-2xl text-gray-600 font-mono flex items-center h-20 gap-3">
               {homeInfo.socials.map((contact, index) => (
                 <a
                   href={contact.url}
                   key={`contact-${index}`}
-                  className="hover:text-gray-100 transition-colors"
+                  className="hover:text-gray-100 font-mono transition-colors"
                 >
                   <CMSIcon icon={contact.iconSvg} />
                 </a>

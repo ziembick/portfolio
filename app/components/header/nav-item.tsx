@@ -15,9 +15,9 @@ export const NavItem = ({ label, href }: NavItemProps) => {
   return (
     <Link
       href={href}
-      className={cn('link-container', isActive && 'text-gray-50', 'hover:text-customPurple')}
+      className={cn('link-container', isActive && 'text-gray-100', 'hover:text-customPurple', 'font-mono')}
     >
-      {label}
+      <span className='text-customPurple shadow-button'>#</span> {label}
     </Link>
   )
 }

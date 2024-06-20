@@ -1,4 +1,4 @@
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { Inter, IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { Header } from './components/header'
@@ -10,7 +10,7 @@ import { Toaster } from './components/toaster'
 export const metadata = {
   title: {
     default: "Paulo Ziembick",
-    template: "%s | Zemdev",
+    template: "%s | Paulo Ziembick",
   },
   icons: [
     {
@@ -30,9 +30,15 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const spaceGrotesk = Space_Grotesk ({
+  variable: '--font-space-grotesk',
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '600', '700'],
+});
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable} ${spaceGrotesk.variable}`}>
       <body>
         <Toaster />
         <BackToTop />

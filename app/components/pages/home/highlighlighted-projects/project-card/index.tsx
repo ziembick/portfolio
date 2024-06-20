@@ -46,7 +46,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
       <div className="flex-1 lg:py-[18px]">
         <motion.h3
-          className="flex items-center gap-3 font-medium text-lg text-gray-50"
+          className="flex items-center gap-3 font-mono text-lg text-gray-50"
           {...animProps}
           transition={{ duration: 0.7 }}
         >
@@ -59,7 +59,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.title}
         </motion.h3>
         <motion.p
-          className="text-gray-400 my-6"
+          className="text-gray-400 my-6 font-mono"
           {...animProps}
           transition={{ duration: 0.2, delay: 0.3 }}
         >
@@ -79,7 +79,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="flex items-center gap-2 text-sm hover:text-customPurple"
+          className="flex items-center gap-2 text-sm hover:text-customPurple font-mono"
         >
           Ver projeto
           <HiArrowNarrowRight size={18} />

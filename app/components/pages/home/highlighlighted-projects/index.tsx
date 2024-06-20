@@ -11,7 +11,7 @@ type HighLightedProjectsProps = {
 
 export const HighLightedProjects = ({ projects }: HighLightedProjectsProps) => {
   return (
-    <section className="container py-16">
+    <section className="container py-16 font-mono">
       <SectionTitle subtitle="destaques" title="Projetos em Destaque" />
       <HorizontalDivider className="mb-16" />
 
@@ -24,8 +24,8 @@ export const HighLightedProjects = ({ projects }: HighLightedProjectsProps) => {
         ))}
 
         <p className="flex items-center gap-1.5">
-          <span className="text-gray-400">Se interessou?</span>
-          <Link href="/projects" className="inline-flex">
+          <span className="text-gray-400 font-mono">Se interessou?</span>
+          <Link href="/projects" className="inline-flex font-mono">
             Ver todos
             <HiArrowNarrowRight />
           </Link>
