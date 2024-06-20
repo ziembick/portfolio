@@ -75,17 +75,6 @@ export async function generateStaticParams() {
   }
 }
 
-export async function getStaticProps({ params }: ProjectProps) {
-  const data = await getProjectDetails(params.slug);
-
-  return {
-    props: {
-      project: data.project,
-    },
-    revalidate: 60, // Regenera a cada 60 segundos (1 minuto)
-  };
-}
-
 export async function generateMetadata({
   params: { slug },
 }: ProjectProps): Promise<Metadata> {
