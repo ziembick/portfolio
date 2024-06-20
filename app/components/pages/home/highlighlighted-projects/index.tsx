@@ -27,7 +27,7 @@ export const HighLightedProjects = ({ projects }: HighLightedProjectsProps) => {
           <span className="text-gray-400 font-mono">Se interessou?</span>
           <Link href="/projects" className="inline-flex font-mono">
             Ver todos
-            <HiArrowNarrowRight />
+            <HiArrowNarrowRight className="text-customPurple"/>
           </Link>
         </p>
       </div>

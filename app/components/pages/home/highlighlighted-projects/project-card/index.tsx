@@ -82,7 +82,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           className="flex items-center gap-2 text-sm hover:text-customPurple font-mono"
         >
           Ver projeto
-          <HiArrowNarrowRight size={18} />
+          <HiArrowNarrowRight size={18} className="text-customPurple"/>
         </Link>
       </div>
     </motion.div>

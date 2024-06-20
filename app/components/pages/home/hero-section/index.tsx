@@ -36,10 +36,8 @@ type HomeSectionProps = {
 
 export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const handleContact = () => {
-    const contactSection = document.querySelector("#contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+    const whatsApp = `https://wa.me/5511985396680?text=Olá, gostaria de conversar sobre projetos ou carreira!`
+    window.open(whatsApp, '_blank')
   };
 
   return (

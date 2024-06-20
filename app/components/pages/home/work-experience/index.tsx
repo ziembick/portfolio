@@ -15,10 +15,7 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
           title="Experiência Profissional"
         />
         <p className="font-mono py-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit
-          quam aperiam error animi. Aut mollitia voluptatum non, sunt animi rem
-          nesciunt repellat corporis aperiam repellendus reiciendis optio ab?
-          Sequi.
+        Aqui, você encontrará um detalhamento das minhas trajetórias e conquistas profissionais. Com dedicação, habilidade e uma paixão pelo meu campo de atuação, cada experiência narrada abaixo representa um passo significativo na minha jornada, destacando habilidades adquiridas, desafios superados e contribuições realizadas.
         </p>
       </div>
       <div className="flex flex-col gap-4">
