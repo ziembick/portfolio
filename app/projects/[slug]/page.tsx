@@ -55,7 +55,7 @@ export default async function Project({ params: { slug } }: ProjectProps) {
   );
 }
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   const query = `
   query ProjectsSlugsQuery() {
     projects(first: 100) {
@@ -67,12 +67,12 @@ export async function getStaticPaths() {
   const { projects } = await fetchHygraphQuery<ProjectPageStaticData>(query);
 
   // return projects;
-  const paths = projects.map((project) => ({ slug: project.slug }));
+  const paths =  projects.map((project) => ({ slug: project.slug }));
 
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 export async function getStaticProps({ params }: ProjectProps) {
@@ -85,7 +85,6 @@ export async function getStaticProps({ params }: ProjectProps) {
     revalidate: 60, // Regenera a cada 60 segundos (1 minuto)
   };
 }
-
 
 export async function generateMetadata({
   params: { slug },
