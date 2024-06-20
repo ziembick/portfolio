@@ -19,6 +19,12 @@ module.exports = {
       boxShadow: {
         button: '0px 0px 68px 7px rgba(5, 150, 105, 0.4)',
       },
+      colors: {
+        customPurple: '#986DFF',
+        customPurpleEscuro: '#7900DA',
+        customPurpleEscuroMais: '#5A04AD',
+        pretoLavado: '#191919'
+      },
     },
   },
   plugins: [],
