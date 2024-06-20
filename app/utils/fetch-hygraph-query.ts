@@ -8,7 +8,7 @@ export const fetchHygraphQuery = async <T> (query:string, revalidate?: number): 
         },
         body: JSON.stringify({query}),
         next: {
-            // revalidate
+            revalidate
         }
     })
 
