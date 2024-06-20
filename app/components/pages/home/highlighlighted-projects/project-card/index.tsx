@@ -79,7 +79,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
         <Link
           href={`/projects/${project.slug}`}
-          className="flex items-center gap-2 text-sm"
+          className="flex items-center gap-2 text-sm hover:text-customPurple"
         >
           Ver projeto
           <HiArrowNarrowRight size={18} />
