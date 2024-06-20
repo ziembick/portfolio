@@ -25,7 +25,7 @@ export const Header = () => {
     >
       <div className="container flex items:center justify-between">
         <Link href="/">
-          <Image width={58} height={49} src="/images/logo.svg" alt="Logo Ziembick" />
+          <Image width={58} height={49} src="/images/logoZ.svg" alt="Logo Ziembick" />
         </Link>
         <nav className="flex items-center gap-4 sm:gap-10">
           {NAV_ITEMS.map((item) => (
