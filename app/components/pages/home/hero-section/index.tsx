@@ -80,7 +80,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
                   key={`contact-${index}`}
                   className="hover:text-gray-100 font-mono transition-colors"
                 >
-                  <CMSIcon icon={contact.iconSvg} />
+                  <CMSIcon icon={contact.iconSvg}/>
                 </a>
               ))}
             </div>

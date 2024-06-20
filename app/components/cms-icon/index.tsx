@@ -8,7 +8,7 @@ export const CMSIcon = ({ icon }: CMSIconProps) => {
         dangerouslySetInnerHTML={{
             __html: icon
         }}
-        
+        className="hover:text-gray-50"
         />
        
     )
