@@ -23,7 +23,7 @@ module.exports = {
         customPurple: '#986DFF',
         customPurpleEscuro: '#7900DA',
         customPurpleEscuroMais: '#5A04AD',
-        pretoLavado: '#191919'
+        pretoLavado: '#191919',
       },
     },
   },
