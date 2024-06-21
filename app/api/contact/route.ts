@@ -18,11 +18,11 @@ export async function POST(request: Request) {
     const emailData = {
       personalizations: [
         {
-          to: [{ email: 'pauloziembick@gmail.com' }],
+          to: [{ email: SENDGRID_SENDER_EMAIL }],
           subject: `New message from ${name}`,
         },
       ],
-      from: { email: SENDGRID_SENDER_EMAIL },
+      from: { email },
       content: [
         {
           type: 'text/plain',
