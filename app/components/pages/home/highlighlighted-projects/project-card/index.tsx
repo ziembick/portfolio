@@ -54,7 +54,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             width={20}
             height={20}
             alt=""
-            src="/images/favicon.svg"
+            src="/favicon.svg"
           />
           {project.title}
         </motion.h3>
