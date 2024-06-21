@@ -24,7 +24,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
       <div className="flex-1 flex flex-col p-8">
         <strong className="font-mono text-gray-50/90 group-hover:text-customPurple transition-all">
-          Bookwise
+          Bé aqui
         </strong>
         <p className="mt-2 text-gray-400 line-clamp-4 font-mono">
          {project.shortDescription}
