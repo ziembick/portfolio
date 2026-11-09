@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['media.graphassets.com', 'portfolio-tutorial-2023.vercel.app', 'portfolio-eight-psi-44.vercel.app'], 
+    domains: ['media.graphassets.com', 'portfolio-tutorial-2023.vercel.app', 'portfolio-eight-psi-44.vercel.app', 'sa-east-1.graphassets.com'], 
   },
 }
 
